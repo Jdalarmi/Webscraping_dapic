@@ -4,7 +4,7 @@ import pandas as pd
 url = "https://dapic.webpic.com.br/pivot/gestaoestoquepivot/consultar"
 
 payload = {
-    "DataInicial": "10/11/2023",
+    "DataInicial": "01/11/2023",
     "DataFinal": "31/12/2023",
     "TipoProduto": 0,
     "TiposProdutos": [
