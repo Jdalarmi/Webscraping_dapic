@@ -1,12 +1,10 @@
 import requests
 import pandas as pd
 
-
-
 url = "https://dapic.webpic.com.br/pivot/gestaoestoquepivot/consultar"
 
 payload = {
-    "DataInicial": "01/11/2023",
+    "DataInicial": "10/11/2023",
     "DataFinal": "31/12/2023",
     "TipoProduto": 0,
     "TiposProdutos": [
@@ -181,7 +179,6 @@ headers = {
     "x-requested-with": "XMLHttpRequest"
 }
 
-
 response = requests.request("POST", url, json=payload, headers=headers)
 
 
@@ -208,18 +205,8 @@ if response.status_code == 200:
 colunas = ['Quantidade total disponível', 'Quantidade total produção']
 df = pd.DataFrame([[float(sublist[7]), float(sublist[11])] for sublist in lista_num], columns=colunas)
 
-
-print(df_2)
-print(df)
-
 df_final = pd.merge(df_2, df, left_index=True, right_index=True)
 
-print(df_final)
+caminho_arquivo_excel = 'resultado.xlsx'
 
-
-
-
-
-
-
-
+df_final.to_excel(caminho_arquivo_excel, index=False)
