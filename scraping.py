@@ -181,7 +181,6 @@ headers = {
 
 response = requests.request("POST", url, json=payload, headers=headers)
 
-
 if response.status_code == 200:
 
     resposta_json = response.json()
