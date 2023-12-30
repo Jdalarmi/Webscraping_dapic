@@ -209,6 +209,6 @@ def scraping():
 
 
 
-    caminho_arquivo_excel = 'resultado.xlsx'
+    # caminho_arquivo_excel = 'resultado.xlsx'
 
-    df_final.to_excel(caminho_arquivo_excel, index=False)
+    # df_final.to_excel(caminho_arquivo_excel, index=False)
