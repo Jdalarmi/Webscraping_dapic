@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-y@1cz60=+uwuq#_1ou%4bso#72xh9r48#i5$_b!lljd5bj8$kw
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dapic-1c87938221a1.herokuapp.com']
 
 
 
